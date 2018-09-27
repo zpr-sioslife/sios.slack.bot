@@ -1,0 +1,19 @@
+{
+  "name": "sios-slack-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "url": "https://github.com/zpr-sioslife/sios.slack.bot"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^6.0.0",
+    "got": "^9.2.2",
+    "node-localstorage": "^1.3.1",
+    "slackbots": "^1.1.0"
+  }
+}
