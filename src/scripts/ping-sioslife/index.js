@@ -92,6 +92,9 @@ class PingSioslife extends BaseScript {
         this.deletePreviousMessage();
         const res = await this.postMessage(msg);
 
+        // post message in other channel for log-history purpose
+        await this.postMessage(msg, process.env.PING_CHANNEL);
+
         if (res.ok) {
             this.LastMessageTs = res.ts;
             this.saveUserData('ping-sioslife-last-msg', res.ts);

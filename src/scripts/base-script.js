@@ -36,8 +36,13 @@ class BaseScript {
         return storage.GetValue(user);
     }
 
-    postMessage(text) {
-        return bot.postMessage(this.channel.name, text, this.messageParams);
+    async postMessage(text, otherChannelName = null) {
+        if(otherChannelName) {
+            const newChannel = await bot.getChannel(otherChannelName).catch(console.error);
+            return await bot.postMessage(newChannel.name, text, this.messageParams);
+        }
+        else 
+            return await bot.postMessage(this.channel.name, text, this.messageParams);
     }
 
     deleteMessage(ts) {

@@ -6,7 +6,8 @@ siosLIFE's slack bot
 Create **.env** file in the root dir
 
 ```sh
-CHANNEL=<public-channel-name>
+CHANNEL=<channel-name>
+PING_CHANNEL=<other-channel-name>
 BOT_NAME=sios.bot
 TOKEN=<token-id>
 SLACK_USERS=<!here>
